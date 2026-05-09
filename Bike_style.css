@@ -1,0 +1,739 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    overflow-x: hidden;
+}
+
+body 
+{
+    background-color: darkgreen;
+}
+
+header
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #0d3b1e;
+}
+
+.Main_Header
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+.Bike_Logo
+{
+    display: flex;
+    align-items: center;
+}
+
+.Logo_Size
+{
+    height: 75px;
+    width: auto;
+}
+
+.Bike_Logo h1
+{
+    color: lightblue;
+    font-size: 30px;
+}
+
+.Social_Icon
+{
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.Social_Icon img
+{
+    height: 40px;
+    width: auto;
+    transition: transform 0.1s;
+}
+
+.Social_Icon img:hover
+{
+    transform: scale(1.25);
+}
+
+.Social_Icon p
+{
+    color: white;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.announcement_text
+{
+    color: gold;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scrolling_text
+{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 100%;
+    animation: scrolling_text 25s linear infinite;
+}
+
+@keyframes scrolling_text
+{
+    0%
+    {
+        transform: translateX(0%);
+    }
+    100%
+    {
+        transform: translateX(-100%);
+    }
+}
+
+nav
+{
+    background-color: darkgreen;
+    padding: 15px;  
+}
+
+nav ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: color 0.1s;
+}
+
+nav ul li a.switch, nav ul li a:hover
+{
+    color: gold;
+}
+
+/* ------------------------------------------------  background and section styles--------------------------------------- --- */
+.Main_Content_and_Background, .mountain_hybrid_gallery_section, .accessories_kids_gallery_section, .service_section, .hire_section, .trails_page_background
+{
+    min-height: calc(100vh - 120px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mountain_hybrid_gallery_section, .accessories_kids_gallery_section, .service_section, .hire_section
+{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------- Home Page layout----------------------------------------------------------- */
+.Main_Content_and_Background
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.477),rgba(0, 0, 0, 0.477)), url('Bike_project_image/Main_Page_Pick.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 25px;
+}
+
+.Limited_offer_style
+{
+    text-align: center;
+}
+
+.Limited_offer_style h2
+{
+    margin-bottom: 10px;
+    font-size: 35px;
+    color: #f1c40f;
+}
+
+.limited_offer_subtitle
+{
+    color: white;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+/* ------------------------------------------------------ bike sales cards----------------------------------------------------------- ---------- */
+.offer_box
+{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.offer_box_details
+{
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.1s ease;
+}
+
+.offer_box_details:hover
+{
+    transform: translateY(-10px);   
+}
+
+
+
+.offer_image
+{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: white;
+}
+
+.offer_text
+{
+    padding: 20px;
+}
+
+.offer_text h3
+{
+    color: #3c3c3c;
+    font-size: 25px;
+}
+
+.bike_model
+{
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+}
+
+.price_box
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.original_price
+{
+    color: #555;
+    text-decoration: line-through;
+    font-size: 15px;
+}
+
+.new_price
+{
+    color: #1a7a3a; 
+    font-size: 20px; 
+    font-weight: bold; 
+}
+
+.discount_badge
+{
+    background-color: darkred;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* ------------------------------------------------------forms and buttons--------------------------------------------------------------- */
+.signup_section
+{
+    background-color:white;
+    border: 1px solid #98e5a5;
+    border-radius: 10px;
+    padding: 50px 40px;
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.signup_section h2
+{
+    color: #0d3b1e;
+    font-size: 30px;    
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.signup_section p
+{
+    color: #303030;
+    font-size: 15px;
+    max-width: 550px;
+    margin: 0 auto 30px auto;
+    line-height: 1.5;
+}
+
+.signup_form
+{
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signup_form input[type="email"]
+{
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.1s;
+}
+
+.signup_form input[type="email"]:focus
+{
+    outline: none;
+    border-color: #1a7a3a;
+}
+
+.signup_form button,.buy_it
+{
+    background-color: #0d3b1e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    width: 100%;
+}
+
+.signup_form button
+{
+    padding: 15px 30px;
+    font-size: 15px;
+}
+
+.buy_it
+{
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.signup_form button:hover, .buy_it:hover
+{
+    background-color: #1a7a3a;
+}
+
+.text_hidden
+{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* ------------------------------------------------------- backgrounds image and headers----------------------------------------- --- -----------*/
+.mountain_hybrid_gallery_section
+{
+    background-image: linear-gradient(rgba(59, 59, 59, 0.7), rgba(59, 59, 59, 0.7)), url('Bike_project_image/mountain_bike_baackground.jpg');
+}
+
+.accessories_kids_gallery_section
+{
+    background-image: linear-gradient(rgba(59, 59, 59, 0.7), rgba(59, 59, 59, 0.7)), url('Bike_project_image/kids_bike_background.jpg');
+}
+
+.service_section
+{
+    background-image: linear-gradient(rgba(59, 59, 59, 0.7), rgba(59, 59, 59, 0.7)), url('Bike_project_image/bike_workshop_background.jpg');
+}
+
+.hire_section
+{
+    padding: 50px 20px;
+    background-image: linear-gradient(rgba(59, 59, 59, 0.7), rgba(59, 59, 59, 0.7)), url('Bike_project_image/bike_hair.jpg');
+}
+
+.trails_page_background
+{
+    background-image: linear-gradient(rgba(59, 59, 59, 0.7), rgba(59, 59, 59, 0.7)), url('Bike_project_image/trail_background.jpg');
+}
+
+.mountain_hybrid_gallery_header h2
+{
+    color: #51cb7e;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.mountain_hybrid_gallery_header h3
+{
+    color: #78e3da;
+    font-size: 35px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.accessories_kids_gallery_header
+{
+    color: #44b6ca;
+    font-size: 35px;
+    margin-bottom: 30px;
+    
+}
+
+.accessories_kids_gallery_header h3
+{
+    color: #bf86d9;
+    font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.service_header, .hire_header
+{
+    margin-bottom: 50px;
+}
+
+.service_header h2, .hire_header h2
+{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.service_header h2
+{
+    color: #ffa200;
+}
+
+.hire_header h2
+{
+    color: #81dda2;
+    text-transform: uppercase;
+}
+
+.service_header p
+{
+    color: #e5d41b;
+    font-size: 20px;
+}
+
+.hire_header p
+{
+    color: white;
+    font-size: 20px;
+}
+
+/* ------------------------------------------------------  Map ---------------------------------------------------------------------------------------------- */
+.map_section
+{
+    text-align: center;
+    width: 100%;
+    max-width: 800px; 
+    margin: 50px auto; 
+}
+
+.map_section h2
+{
+    color: #c6bb65;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.google_map
+{
+    width: 100%;
+    height: 450px;
+    max-width: 1000px;
+    border: 2px solid #1a7a3a;
+    border-radius: 10px;
+    margin: auto;
+    display: block; 
+}
+
+/* --- -------------------------------------------------------------------services page layout ---------------------------------------------- */
+.service_box_structure
+{
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.machanic_image_box, .service_list_layout
+{
+    flex: 1;
+}
+
+.mechanic_image
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 400px;
+}
+
+.service_list_layout
+{
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service_list
+{
+    list-style: none;
+}
+
+.service_list li
+{
+    margin-bottom: 30px;
+}
+
+.service_list h3
+{
+    color: #1a7a3a;
+    font-size: 25px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #f1c40f;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.service_list p
+{
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 5px;
+    
+}
+
+/* -----------------------------------------to know more info textbox------------------------------------------------------------------------------------ */
+.know_more_info_1, .know_more_info_2
+{
+    margin-top: 50px;
+    color: white;
+}
+
+.know_more_info_1 h3, .know_more_info_2 h3
+{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.know_more_info_1 h3
+{
+    color: #e5d41b;
+}
+
+.know_more_info_2 h3
+{
+    color: #81dda2;
+}
+
+.know_more_info_1 p, .know_more_info_2 p
+{
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* --- --------------------------------------------------hire pricing table ------------------------------------------------------------------ */
+.pricing_table
+{
+    margin: auto;
+    width: 85%;
+    border-collapse: collapse;
+    border: 2px solid #02a03c;
+    background-color:white;
+    overflow-wrap: break-word;
+}
+
+.pricing_table th, .pricing_table td
+{
+    border: 1px solid #02a03c;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pricing_table th
+{
+    background-color: #0d3b1e;
+    color: white;
+    font-size: 20px;
+}
+
+.table_price
+{
+    color: #1a7a3a;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------trails page---------------------------------------------------- --- */
+.trails_gallery, .trail_video_section
+{
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.trails_header
+{
+    color: #b8da0e;
+    margin-bottom: 20px;
+}
+
+.terrain_layout
+{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.terrain_card
+{
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #e6eec0;
+    vertical-align: top;
+}
+
+.terrain_image, .adventure_video
+{
+    width: 100%;
+}
+
+.terrain_image
+{
+    height: 180px;
+    object-fit: cover;
+}
+
+.video_layout
+{
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ------------------------------------------------------------------- Footer --------------------------------------------------------------- */
+footer
+{
+    background-color: #0d3b1e;
+    color:white;
+}
+
+.footer_box
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    padding: 10px 20px;
+    margin: auto;
+    flex-wrap: wrap; 
+}
+
+.footer_left
+{
+    text-align: left;
+    flex: 1;
+}
+
+.footer_center
+{
+    text-align: center;
+    flex: 1;    
+}
+
+.footer_right
+{
+    text-align: right;
+    flex: 1;    
+}
+
+footer p
+{
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+/* ------------------------------------------------------------------- Mobile ----------------------------- --------------------------------------------------------------- */ 
+@media screen and (max-width: 768px) 
+{ 
+
+    .offer_box_details 
+    { 
+        width: 100%; 
+        max-width: 400px; 
+    } 
+     
+    .terrain_card 
+    { 
+        width: 90%; 
+        margin: 10px auto; 
+        display: block; 
+    } 
+ 
+    .footer_box 
+    { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 20px; 
+    } 
+ 
+    .footer_left, .footer_center, .footer_right 
+    { 
+        text-align: center; 
+    } 
+ 
+    .video_layout 
+    { 
+        width: 100%; 
+    } 
+
+    nav ul 
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; 
+    }
+
+    .Social_Icon 
+    {
+        width: 100%; /* Forces the box to take up the whole screen width */
+        justify-content: center; /* Pushes the text and icons to the exact middle */
+        margin-right: 0; /* Removes the desktop spacing */
+        margin-top: 10px; /* Adds a little breathing room below the logo */
+        margin-bottom: 10px; /* Adds a little breathing room above the scrolling text */
+    }
+}
